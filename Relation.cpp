@@ -26,7 +26,7 @@ std::string Relation::toString(){
     std::string relation = "";
     if (isQuery == false) {
         for (Tuple t : myTuples) {
-            relation += "  ";
+            relation += "\n  ";
             for (int i = 0; i < t.getSize(); i++) {
                 relation += myHeader.at(i) + "=" + t.at(i);
                 if ((i + 1) != t.getSize()) {
@@ -38,7 +38,7 @@ std::string Relation::toString(){
         }
     } else {
         for (Tuple t : myTuples) {
-            relation += "  ";
+            relation += "\n  ";
             for (int i = 0; i < t.getSize(); i++) {
                 relation += myHeader.atQ(i) + "=" + t.at(i);
                 if ((i + 1) != t.getSize()) {
