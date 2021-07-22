@@ -24,6 +24,9 @@ void Relation::addTuple(Tuple toAdd){
 
 std::string Relation::toString(){
     std::string relation = "";
+    if (myHeader.GetSizeQ() != 0) {
+        relation += "\n";
+    }
     if (isQuery == false) {
         for (Tuple t : myTuples) {
             relation += "  ";
