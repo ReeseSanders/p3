@@ -22,6 +22,7 @@ public:
     std::vector<std::string> GetHead() {return attributes;}
     void RenameHead(std::vector<std::string> rename){attributes = rename;}
     void addQ(std::vector<std::string> toAdd){qattributes = toAdd;}
+    int GetSizeQ(){return qattributes.size();}
 };
 
 #endif //PROJECT1_HEADER_H
