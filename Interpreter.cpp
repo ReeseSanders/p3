@@ -29,7 +29,7 @@ void Interpreter::Interpret(){
     for (unsigned int i = 0; i < query.size(); i++){
         //std::cout << query.at(i).ToString() << std::endl;
         Relation eval = evaluatePredicate(query.at(i));
-        std::cout << eval.GetName() << std::endl << eval.toString();
+        std::cout << eval.GetName() << eval.toString();
     }
 }
 
