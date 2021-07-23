@@ -24,7 +24,7 @@ void Relation::addTuple(Tuple toAdd){
 
 std::string Relation::toString(){
     std::string relation = "";
-    int iter = 1;
+    unsigned int iter = 1;
 
     if (myHeader.GetSizeQ() != 0) {
         relation += "\n";
