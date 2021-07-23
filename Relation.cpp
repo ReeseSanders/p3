@@ -24,6 +24,8 @@ void Relation::addTuple(Tuple toAdd){
 
 std::string Relation::toString(){
     std::string relation = "";
+    int iter = 1;
+
     if (myHeader.GetSizeQ() != 0) {
         relation += "\n";
     }
@@ -47,13 +49,15 @@ std::string Relation::toString(){
                 if ((i + 1) != t.getSize()) {
                     relation += ", ";
                 } else {
-                    relation += "\n";
+                    if(iter != myTuples.size()) {
+                        relation += "\n";
+                    }
                 }
             }
+            iter++;
         }
 
     }
-
     return relation;
 }
 
